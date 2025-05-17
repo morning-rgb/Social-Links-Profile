@@ -1,0 +1,122 @@
+@font-face {
+    font-family: Inter;
+    font-style: normal;
+    src: url(assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+:root {
+    --Green: hsl(75, 94%, 57%);
+    --White: hsl(0, 0%, 100%);
+    --Grey700: hsl(0, 0%, 20%);
+    --Grey800: hsl(0, 0%, 12%);
+    --Grey900: hsl(0, 0%, 8%);
+    --StatusColor: hsl(0, 0%, 82%);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+main {
+    min-height: 100vh;
+    background-color: var(--Grey900);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile {
+    background-color: var(--Grey800);
+    width: 384px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 15px;
+}
+
+.profile * {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.profile > img {
+    width: 88px;
+    height: 88px;
+
+    border-radius: 100%;
+    margin-top: 43px;
+}
+
+.profile .name {
+    color: var(--White);
+    font-size: 24px;
+    font-weight: 700;
+
+    margin-top: 26px;
+}
+
+.profile .address {
+    color: var(--Green);
+    font-weight: 600;
+
+    margin-top: 9px;
+}
+
+.profile .status {
+    color: var(--StatusColor);
+
+    margin-top: 28px;
+}
+
+.profile a {
+    width: 304px;
+    height: 45px;
+    margin-top: 16px;
+
+    border-radius: 10px;
+
+    line-height: 45px;
+
+    color: var(--White);
+    background-color: var(--Grey700);
+
+    transition: color 0.2s, background-color 0.2s;
+    
+    text-decoration: none;
+
+    &:hover {
+        color: var(--Grey800);
+        background-color: var(--Green);
+    }
+}
+
+.profile a:first-of-type {
+    margin-top: 26px;
+}
+
+.profile a:last-of-type {
+    margin-bottom: 46px;
+}
+
+@media (max-width: 430px) {
+    .profile {
+        width: calc(100vw - 49px);
+    }
+
+    .profile a {
+        width: 85.5%;
+    }
+}
+
+@media (max-height: 618px) {
+    .profile {
+        margin: 20px 0 20px 0;
+    }
+}
